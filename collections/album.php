@@ -33,17 +33,23 @@
 					while (next_image()): 
 					if ($_zp_current_image->isPhoto()) { ?>
 						<figure class="js-item"><!--	Class for js suffle -->
-							<div class="image_thumb_container"><!--	Class for hidding oversize hover effect -->
-								<a href="<?php echo html_encode(getImageURL()); ?>" title="<?php printBareImageTitle(); ?>">
+							 <div class="image_thumb_container"><!--	Class for hidding oversize hover effect -->
+								<a href="<?php echo html_encode(getFullImageURL()); ?>" title="<?php printBareImageTitle(); ?>" data-fancybox="images">
 									<img 
 									src="<?php echo html_encode(getCustomImageURL(NULL,500,NULL,NULL,NULL,NULL,NULL,false,NULL)); ?>" 
 									alt="<?php echo getBareImageTitle(); ?>" 
 									width="<?php echo getFullWidth(); ?>" 
 									height="<?php echo getFullHeight(); ?>" />
 								</a>
-							</div>
+						</div>
+						<figcaption>
+						<a href="<?php echo html_encode(getImageURL()); ?>" title="<?php printBareImageTitle(); ?>">
 							<?php # Display the caption if option enabled
-							 if (getOption('col_albdesc')) { echo '<figcaption><strong>',printBareImageTitle(),'</strong>',printBareImageDesc(),'</figcaption>';} ?>
+							 if (getOption('col_albdesc')) { echo '<strong>',printBareImageTitle(),'</strong>';} ?>
+						</a>
+						<?php # Display the caption if option enabled
+							 if (getOption('col_albdesc')) { echo printBareImageDesc();} ?>
+							 </figcaption>
 						</figure>
 					<?php	} 
 					 else { ?>
