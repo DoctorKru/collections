@@ -1769,6 +1769,12 @@ a.relateditems_thumb {
 	clear: both;
 	padding-bottom: 2px;
 }
+/* Featured Image Plugin */
+
+.featuredimage_singlenews,
+.featuredimage_singlepage {
+	margin-bottom: 2rem;
+}
 
 @media (min-width:700px) {
 	
