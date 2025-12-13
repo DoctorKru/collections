@@ -93,7 +93,7 @@
 						
 						
 						<?php # Showing Categories
-									printAllNewsCategories(gettext("All Categories"),false,"categories_list","categories_list_active");
+									printAllNewsCategories(gettext("All News"),false,"categories_list","categories_list_active");
 						?>
 					</div>
 		</main>
